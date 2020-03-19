@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4644bd59-5717-49e7-a8bd-473b44bc11cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RocketInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RocketInputHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584564341616</updated>
-      <workItem from="1584564343249" duration="2905000" />
+      <workItem from="1584564343249" duration="5674000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1584564747632</created>
@@ -109,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584625654808</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added rocket input handler. added 'Thrust', 'RotateLeft' and 'RotateRight' virtual keys.">
+      <created>1584628395641</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584628395641</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -132,7 +137,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="added basic terrain and launchpad." />
     <MESSAGE value="added rocket compound object. various materials for different parts of rocket." />
-    <option name="LAST_COMMIT_MESSAGE" value="added rocket compound object. various materials for different parts of rocket." />
+    <MESSAGE value="added rocket input handler. added 'Thrust', 'RotateLeft' and 'RotateRight' virtual keys." />
+    <option name="LAST_COMMIT_MESSAGE" value="added rocket input handler. added 'Thrust', 'RotateLeft' and 'RotateRight' virtual keys." />
   </component>
   <component name="WindowStateProjectService">
     <state width="461" height="442" key="Diff.GoToChangePopup" timestamp="1584625862547">
@@ -148,13 +154,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584625405393" />
-    <state x="560" y="268" key="Vcs.Push.Dialog.v2" timestamp="1584625874579">
+    <state x="560" y="268" key="Vcs.Push.Dialog.v2" timestamp="1584628404514">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="560" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584625874579" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584625821326">
+    <state x="560" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584628404514" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584630537171">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584625821326" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584630537171" />
   </component>
 </project>
