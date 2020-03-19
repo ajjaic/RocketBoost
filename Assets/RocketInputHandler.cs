@@ -1,24 +1,14 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq.Expressions;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class RocketInputHandler : MonoBehaviour
 {
     private Rigidbody _rigidBody;
-    
-    // Thrust
-    [SerializeField] private float forwardVelocity;
+    [SerializeField] private float forwardVelocity; // thrust
     private Vector3 _forceVector;
-    
-    // Rotations
-    [SerializeField] private float rotationVelocity;
+    [SerializeField] private float rotationVelocity; // rotations
     private Vector3 _rotationVector;
-    
-    // Audio
-    private AudioSource _audioSource;
+    private AudioSource _audioSource; // audio
 
     // messages
     void Start()
@@ -29,26 +19,23 @@ public class RocketInputHandler : MonoBehaviour
 
     void Update()
     {
-        ProcessInput();
+        HandleThrust();
+        HandleRotation();
     }
-
 
     void FixedUpdate()
     {
         _rigidBody.AddRelativeForce(_forceVector);
         if (Math.Abs(_rotationVector.z) > Mathf.Epsilon)
         {
+            _rigidBody.freezeRotation = true;
             var rotationDelta = Quaternion.Euler(_rotationVector);
             _rigidBody.MoveRotation((_rigidBody.rotation * rotationDelta));
+            _rigidBody.freezeRotation = false;
         }
     }
     
-    private void ProcessInput()
-    {
-        HandleThrust();
-        HandleRotation();
-    }
-
+    // methods
     private void HandleThrust()
     {
         if (Input.GetButton("Thrust"))

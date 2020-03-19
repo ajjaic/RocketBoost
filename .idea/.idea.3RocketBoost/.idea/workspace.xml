@@ -21,6 +21,7 @@
     <favorites_list name="3RocketBoost" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubPullRequestsUISettings">
@@ -63,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="Shelf.Project.Settings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -86,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584564341616</updated>
-      <workItem from="1584564343249" duration="11034000" />
+      <workItem from="1584564343249" duration="11916000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1584564747632</created>
@@ -130,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584639204445</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added thruster sound for rocket.">
+      <created>1584641175871</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584641175871</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -156,7 +164,8 @@
     <MESSAGE value="added rocket input handler. added 'Thrust', 'RotateLeft' and 'RotateRight' virtual keys." />
     <MESSAGE value="moved code that thrusts rocket to fixed update. now rocket can move thrust upwards when `space` is pressed" />
     <MESSAGE value="added ability to steer ship." />
-    <option name="LAST_COMMIT_MESSAGE" value="added ability to steer ship." />
+    <MESSAGE value="added thruster sound for rocket." />
+    <option name="LAST_COMMIT_MESSAGE" value="added thruster sound for rocket." />
   </component>
   <component name="WindowStateProjectService">
     <state width="461" height="442" key="Diff.GoToChangePopup" timestamp="1584625862547">
@@ -168,14 +177,14 @@
     </state>
     <state x="100" y="78" width="1720" height="900" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584625866380" />
     <state x="100" y="100" width="1720" height="880" key="DiffContextDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1584578950966" />
-    <state x="469" y="179" key="SettingsEditor" timestamp="1584625405393">
+    <state x="469" y="179" key="SettingsEditor" timestamp="1584641272309">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584625405393" />
-    <state x="560" y="268" key="Vcs.Push.Dialog.v2" timestamp="1584639206086">
+    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584641272309" />
+    <state x="560" y="268" key="Vcs.Push.Dialog.v2" timestamp="1584641183377">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="560" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584639206086" />
+    <state x="560" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584641183377" />
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584634957083">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
