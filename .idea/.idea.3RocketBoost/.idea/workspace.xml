@@ -84,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584564341616</updated>
-      <workItem from="1584564343249" duration="5674000" />
+      <workItem from="1584564343249" duration="9850000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1584564747632</created>
@@ -114,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584628395641</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="moved code that thrusts rocket to fixed update. now rocket can move thrust upwards when `space` is pressed">
+      <created>1584632310185</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584632310185</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -138,7 +145,8 @@
     <MESSAGE value="added basic terrain and launchpad." />
     <MESSAGE value="added rocket compound object. various materials for different parts of rocket." />
     <MESSAGE value="added rocket input handler. added 'Thrust', 'RotateLeft' and 'RotateRight' virtual keys." />
-    <option name="LAST_COMMIT_MESSAGE" value="added rocket input handler. added 'Thrust', 'RotateLeft' and 'RotateRight' virtual keys." />
+    <MESSAGE value="moved code that thrusts rocket to fixed update. now rocket can move thrust upwards when `space` is pressed" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved code that thrusts rocket to fixed update. now rocket can move thrust upwards when `space` is pressed" />
   </component>
   <component name="WindowStateProjectService">
     <state width="461" height="442" key="Diff.GoToChangePopup" timestamp="1584625862547">
@@ -154,13 +162,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584625405393" />
-    <state x="560" y="268" key="Vcs.Push.Dialog.v2" timestamp="1584628404514">
+    <state x="560" y="268" key="Vcs.Push.Dialog.v2" timestamp="1584632312776">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="560" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584628404514" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584630537171">
+    <state x="560" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584632312776" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584634957083">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584630537171" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584634957083" />
   </component>
 </project>
