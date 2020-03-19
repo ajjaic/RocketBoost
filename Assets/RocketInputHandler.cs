@@ -7,22 +7,31 @@ using UnityEngine.PlayerLoop;
 
 public class RocketInputHandler : MonoBehaviour
 {
-    [SerializeField] private float forwardVelocity;
-    [SerializeField] private float rotationVelocity;
     private Rigidbody _rigidBody;
-    private Vector3 _rotationVector;
+    
+    // Thrust
+    [SerializeField] private float forwardVelocity;
     private Vector3 _forceVector;
+    
+    // Rotations
+    [SerializeField] private float rotationVelocity;
+    private Vector3 _rotationVector;
+    
+    // Audio
+    private AudioSource _audioSource;
 
     // messages
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         ProcessInput();
     }
+
 
     void FixedUpdate()
     {
@@ -43,9 +52,16 @@ public class RocketInputHandler : MonoBehaviour
     private void HandleThrust()
     {
         if (Input.GetButton("Thrust"))
+        {
+            if (!_audioSource.isPlaying)
+                _audioSource.Play();
             _forceVector = Vector3.up * forwardVelocity;
+        }
         else
+        {
+            _audioSource.Stop();
             _forceVector = Vector3.zero;
+        }
     }
 
     private void HandleRotation()
