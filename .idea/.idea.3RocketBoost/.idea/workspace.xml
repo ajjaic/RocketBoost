@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4644bd59-5717-49e7-a8bd-473b44bc11cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosters.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boosters.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LaunchPad.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LaunchPad.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NoseCone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NoseCone.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rocket.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rocket.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rocket.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RocketInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RocketInputHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
@@ -87,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584564341616</updated>
-      <workItem from="1584564343249" duration="11916000" />
+      <workItem from="1584564343249" duration="13142000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1584564747632</created>
@@ -138,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584641175871</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added obstacles. constrain rocket movement to x,y axis. constrain rotation to only z axis. freeze physics rotation while manually rotating">
+      <created>1584654723422</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1584654723422</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -157,7 +168,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="added basic terrain and launchpad." />
     <MESSAGE value="added rocket compound object. various materials for different parts of rocket." />
@@ -165,7 +175,8 @@
     <MESSAGE value="moved code that thrusts rocket to fixed update. now rocket can move thrust upwards when `space` is pressed" />
     <MESSAGE value="added ability to steer ship." />
     <MESSAGE value="added thruster sound for rocket." />
-    <option name="LAST_COMMIT_MESSAGE" value="added thruster sound for rocket." />
+    <MESSAGE value="added obstacles. constrain rocket movement to x,y axis. constrain rotation to only z axis. freeze physics rotation while manually rotating" />
+    <option name="LAST_COMMIT_MESSAGE" value="added obstacles. constrain rocket movement to x,y axis. constrain rotation to only z axis. freeze physics rotation while manually rotating" />
   </component>
   <component name="WindowStateProjectService">
     <state width="461" height="442" key="Diff.GoToChangePopup" timestamp="1584625862547">

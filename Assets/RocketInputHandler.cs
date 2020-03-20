@@ -28,13 +28,22 @@ public class RocketInputHandler : MonoBehaviour
         _rigidBody.AddRelativeForce(_forceVector);
         if (Math.Abs(_rotationVector.z) > Mathf.Epsilon)
         {
+            // Bug: After freezerotation is over, x and y axis rotation is not constrained again.
             _rigidBody.freezeRotation = true;
             var rotationDelta = Quaternion.Euler(_rotationVector);
             _rigidBody.MoveRotation((_rigidBody.rotation * rotationDelta));
             _rigidBody.freezeRotation = false;
         }
     }
-    
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (!other.gameObject.CompareTag("Friendly"))
+        {
+            print("DIE"); 
+        } 
+    }
+
     // methods
     private void HandleThrust()
     {
