@@ -27,13 +27,11 @@ public class SessionManager : MonoBehaviour
     // methods
     private void PlayerHasDied()
     {
-        print("received dead");
         StartCoroutine(SceneLoader.LoadFirstLevel(sceneLoadDelay));
     }
 
     private void PlayerReachesEndOfLevel()
     {
-        print("received next level");
         StartCoroutine(SceneLoader.LoadNextLevel(sceneLoadDelay));
     }
 }

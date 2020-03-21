@@ -4,15 +4,25 @@ using UnityEngine;
 // TODO: stop thrust afx when player dead
 public class RocketInputHandler : MonoBehaviour
 {
-    [SerializeField] private GameEvent playerDeathEvent = null;
-    [SerializeField] private GameEvent playerAtLvlEndEvent = null;
+    #pragma warning disable 649
+    [Header("Event")]
+    [SerializeField] private GameEvent playerDeathEvent;
+    [SerializeField] private GameEvent playerAtLvlEndEvent;
+    [Header("Movement")]
+    [SerializeField] private float forwardVelocity; 
+    [SerializeField] private float rotationVelocity;
+    [Header("Audio")]
+    [SerializeField] private AudioClip mainThruster;
+    [SerializeField] private AudioClip deathExplosion;
+    [SerializeField] private AudioClip levelFinished;
+    #pragma warning restore 649
+    
     private Rigidbody _rigidBody;
-    [SerializeField] private float forwardVelocity = 0f; // thrust
-    private Vector3 _forceVector;
-    [SerializeField] private float rotationVelocity = 0f; // rotations
-    private Vector3 _rotationVector;
-    private AudioSource _audioSource; // audio
-    private State _state = State.Alive; // player state
+    private AudioSource _audioSource; 
+    
+    private Vector3 _forceVector; // thrust
+    private Vector3 _rotationVector; // rotations
+    private State _state = State.Alive; // current player state
 
     // messages
     void Start()
@@ -23,14 +33,9 @@ public class RocketInputHandler : MonoBehaviour
 
     void Update()
     {
+        // TODO: replace with state switch statement
         HandleThrust();
         HandleRotation();
-        
-        if (_state == State.Dead)
-        {
-            PostDeathCleanUp();
-            enabled = false;
-        }
     }
 
     void FixedUpdate()
@@ -48,16 +53,20 @@ public class RocketInputHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (_state != State.Alive) { return; }
+        if (_state == State.Dead || _state == State.LevelComplete) { return; }
         
         if (!other.gameObject.CompareTag("Friendly") && !other.gameObject.CompareTag("Finish"))
         {
             _state = State.Dead;
+            enabled = false;
+            HandleAudio();
             playerDeathEvent.RaiseEvent();
         }
         else if (other.gameObject.CompareTag("Finish"))
         {
-            _state = State.Dead;
+            _state = State.LevelComplete;
+            enabled = false;
+            HandleAudio();
             playerAtLvlEndEvent.RaiseEvent();
         }
     }
@@ -67,15 +76,15 @@ public class RocketInputHandler : MonoBehaviour
     {
         if (Input.GetButton("Thrust"))
         {
-            if (!_audioSource.isPlaying)
-                _audioSource.Play();
+            _state = State.AliveAndThrusting;
             _forceVector = Vector3.up * forwardVelocity;
         }
         else
         {
-            _audioSource.Stop();
+            _state = State.AliveAndNotThrusting;
             _forceVector = Vector3.zero;
         }
+        HandleAudio();
     }
 
     private void HandleRotation()
@@ -93,15 +102,38 @@ public class RocketInputHandler : MonoBehaviour
             _rotationVector.z = 0;
         }
     }
-
-    private void PostDeathCleanUp()
-    {
-        _audioSource.Stop();
-    }
     
+    private void HandleAudio()
+    {
+        switch (_state)
+        {
+            case State.AliveAndThrusting:
+                if (!_audioSource.isPlaying)
+                    _audioSource.PlayOneShot(mainThruster);
+                break;
+            
+            case State.AliveAndNotThrusting:
+                _audioSource.Stop();
+                break;
+            
+            case State.Dead:
+                _audioSource.Stop();
+                _audioSource.PlayOneShot(deathExplosion);
+                break;
+            
+            case State.LevelComplete:
+                _audioSource.Stop();
+                _audioSource.PlayOneShot(levelFinished);
+                break;
+        }
+    }
+
     enum State
     {
         Alive,
-        Dead
+        Dead,
+        AliveAndThrusting,
+        AliveAndNotThrusting,
+        LevelComplete
     }
 }

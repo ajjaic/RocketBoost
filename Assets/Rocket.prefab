@@ -538,6 +538,9 @@ MonoBehaviour:
     type: 2}
   forwardVelocity: 1.5
   rotationVelocity: 3
+  mainThruster: {fileID: 8300000, guid: 62a9d7abdec5b439fa214951d8982c54, type: 3}
+  deathExplosion: {fileID: 8300000, guid: 0e537451c5b114b438ae03aeeaa23cf4, type: 3}
+  levelFinished: {fileID: 8300000, guid: fb9a5c11eb7ec4b88898585118d9b8ff, type: 3}
 --- !u!82 &1674600403
 AudioSource:
   m_ObjectHideFlags: 0
@@ -548,7 +551,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d406a9f1d111c464aa7744a6c639287c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
