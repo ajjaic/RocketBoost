@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4644bd59-5717-49e7-a8bd-473b44bc11cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainEngineTiny.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainEngineTiny.ogg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rocket.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RocketInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RocketInputHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SessionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SessionManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584564341616</updated>
       <workItem from="1584564343249" duration="24929000" />
-      <workItem from="1584795468535" duration="9138000" />
+      <workItem from="1584795468535" duration="10380000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1584564747632</created>
@@ -177,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584798807152</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added death and success afx. created new states to represent thrusting, not thrusting and level complete. audio is chosen based on state.">
+      <created>1584807474181</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1584807474181</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -209,7 +213,8 @@
     <MESSAGE value="changed materials for the various objects in the scene. created obstacles for testing. now rocket can distinguish between collisions with obstacles and landing pad." />
     <MESSAGE value="created obstacle prefabs. landing pad prefab. created another level." />
     <MESSAGE value="player has dead/alive states. scriptable object event system created. events generated when player either dead or reaches end of current level. on death, first level loaded. On reach end of level, next level loaded." />
-    <option name="LAST_COMMIT_MESSAGE" value="player has dead/alive states. scriptable object event system created. events generated when player either dead or reaches end of current level. on death, first level loaded. On reach end of level, next level loaded." />
+    <MESSAGE value="added death and success afx. created new states to represent thrusting, not thrusting and level complete. audio is chosen based on state." />
+    <option name="LAST_COMMIT_MESSAGE" value="added death and success afx. created new states to represent thrusting, not thrusting and level complete. audio is chosen based on state." />
   </component>
   <component name="WindowStateProjectService">
     <state x="110" y="213" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1584797138054">

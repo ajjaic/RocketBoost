@@ -12,9 +12,13 @@ public class RocketInputHandler : MonoBehaviour
     [SerializeField] private float forwardVelocity; 
     [SerializeField] private float rotationVelocity;
     [Header("Audio")]
-    [SerializeField] private AudioClip mainThruster;
-    [SerializeField] private AudioClip deathExplosion;
-    [SerializeField] private AudioClip levelFinished;
+    [SerializeField] private AudioClip mainThrusterAudio;
+    [SerializeField] private AudioClip deathExplosionAudio;
+    [SerializeField] private AudioClip levelFinishedAudio;
+    [Header("Particle Systems")]
+    [SerializeField] private ParticleSystem mainThrusterParticleSys;
+    [SerializeField] private ParticleSystem deathExplosionParticleSys;
+    [SerializeField] private ParticleSystem levelFinishedParticleSys;
     #pragma warning restore 649
     
     private Rigidbody _rigidBody;
@@ -59,14 +63,14 @@ public class RocketInputHandler : MonoBehaviour
         {
             _state = State.Dead;
             enabled = false;
-            HandleAudio();
+            HandleStateChange();
             playerDeathEvent.RaiseEvent();
         }
         else if (other.gameObject.CompareTag("Finish"))
         {
             _state = State.LevelComplete;
             enabled = false;
-            HandleAudio();
+            HandleStateChange();
             playerAtLvlEndEvent.RaiseEvent();
         }
     }
@@ -84,7 +88,7 @@ public class RocketInputHandler : MonoBehaviour
             _state = State.AliveAndNotThrusting;
             _forceVector = Vector3.zero;
         }
-        HandleAudio();
+        HandleStateChange();
     }
 
     private void HandleRotation()
@@ -103,29 +107,43 @@ public class RocketInputHandler : MonoBehaviour
         }
     }
     
-    private void HandleAudio()
+    private void HandleStateChange()
     {
         switch (_state)
         {
             case State.AliveAndThrusting:
                 if (!_audioSource.isPlaying)
-                    _audioSource.PlayOneShot(mainThruster);
+                    _audioSource.PlayOneShot(mainThrusterAudio);
+                if (!mainThrusterParticleSys.isPlaying)
+                    mainThrusterParticleSys.Play();
                 break;
             
             case State.AliveAndNotThrusting:
                 _audioSource.Stop();
+                mainThrusterParticleSys.Stop();
                 break;
             
             case State.Dead:
                 _audioSource.Stop();
-                _audioSource.PlayOneShot(deathExplosion);
+                _audioSource.PlayOneShot(deathExplosionAudio);
+                StopAllParticles();
+                deathExplosionParticleSys.Play();
                 break;
             
             case State.LevelComplete:
                 _audioSource.Stop();
-                _audioSource.PlayOneShot(levelFinished);
+                _audioSource.PlayOneShot(levelFinishedAudio);
+                StopAllParticles();
+                levelFinishedParticleSys.Play();
                 break;
         }
+    }
+
+    private void StopAllParticles()
+    {
+        mainThrusterParticleSys.Stop();
+        deathExplosionParticleSys.Stop();
+        levelFinishedParticleSys.Stop();
     }
 
     enum State
