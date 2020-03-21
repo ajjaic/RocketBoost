@@ -533,6 +533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ead80511c514a398d7e669f96be838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDeathEvent: {fileID: 11400000, guid: 79d5dc6e2e3244c918326aa2a38a2ae8, type: 2}
+  playerAtLvlEndEvent: {fileID: 11400000, guid: 9b3a154e640804dbda359ef2152912f5,
+    type: 2}
   forwardVelocity: 1.5
   rotationVelocity: 3
 --- !u!82 &1674600403

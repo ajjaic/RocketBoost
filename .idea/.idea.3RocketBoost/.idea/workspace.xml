@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4644bd59-5717-49e7-a8bd-473b44bc11cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Boosters.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boosters.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NoseCone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NoseCone.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Obstacles.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Obstacles.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rocket.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rocket.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LandingPad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LandingPad.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LaunchPad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LaunchPad.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rocket.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RocketInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RocketInputHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +38,20 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/SessionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RocketInputHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Level1.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Directional Light.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Assets/GameEventListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/SessionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/RocketInputHandler.cs" />
       </list>
     </option>
@@ -91,7 +100,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584564341616</updated>
-      <workItem from="1584564343249" duration="13486000" />
+      <workItem from="1584564343249" duration="24929000" />
+      <workItem from="1584795468535" duration="2745000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1584564747632</created>
@@ -156,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584713814821</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="created obstacle prefabs. landing pad prefab. created another level.">
+      <created>1584721000350</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1584721000350</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -168,6 +185,7 @@
           <value>
             <State>
               <option name="SHOW_DETAILS_IN_CHANGES" value="false" />
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -185,18 +203,23 @@
     <MESSAGE value="added thruster sound for rocket." />
     <MESSAGE value="added obstacles. constrain rocket movement to x,y axis. constrain rotation to only z axis. freeze physics rotation while manually rotating" />
     <MESSAGE value="changed materials for the various objects in the scene. created obstacles for testing. now rocket can distinguish between collisions with obstacles and landing pad." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed materials for the various objects in the scene. created obstacles for testing. now rocket can distinguish between collisions with obstacles and landing pad." />
+    <MESSAGE value="created obstacle prefabs. landing pad prefab. created another level." />
+    <option name="LAST_COMMIT_MESSAGE" value="created obstacle prefabs. landing pad prefab. created another level." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="110" y="213" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1584797138054">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="110" y="213" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584797138054" />
     <state width="461" height="442" key="Diff.GoToChangePopup" timestamp="1584625862547">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="461" height="442" key="Diff.GoToChangePopup/0.0.1920.1080@0.0.1920.1080" timestamp="1584625862547" />
-    <state x="100" y="78" width="1720" height="900" key="DiffContextDialog" timestamp="1584625866380">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="100" y="78" width="1720" height="900" key="DiffContextDialog" timestamp="1584721080704">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="100" y="78" width="1720" height="900" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584625866380" />
-    <state x="100" y="100" width="1720" height="880" key="DiffContextDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1584578950966" />
+    <state x="100" y="78" width="1720" height="900" key="DiffContextDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1584721080704" />
     <state x="469" y="179" key="SettingsEditor" timestamp="1584641272309">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -205,9 +228,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584641183377" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584634957083">
+    <state x="293" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584747101143">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584634957083" />
+    <state x="293" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584747101143" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584797037459">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584797037459" />
   </component>
 </project>

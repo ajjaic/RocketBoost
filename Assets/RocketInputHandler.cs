@@ -1,14 +1,18 @@
 ﻿using System;
 using UnityEngine;
 
+// TODO: stop thrust afx when player dead
 public class RocketInputHandler : MonoBehaviour
 {
+    [SerializeField] private GameEvent playerDeathEvent = null;
+    [SerializeField] private GameEvent playerAtLvlEndEvent = null;
     private Rigidbody _rigidBody;
-    [SerializeField] private float forwardVelocity; // thrust
+    [SerializeField] private float forwardVelocity = 0f; // thrust
     private Vector3 _forceVector;
-    [SerializeField] private float rotationVelocity; // rotations
+    [SerializeField] private float rotationVelocity = 0f; // rotations
     private Vector3 _rotationVector;
     private AudioSource _audioSource; // audio
+    private State _state = State.Alive; // player state
 
     // messages
     void Start()
@@ -21,6 +25,12 @@ public class RocketInputHandler : MonoBehaviour
     {
         HandleThrust();
         HandleRotation();
+        
+        if (_state == State.Dead)
+        {
+            PostDeathCleanUp();
+            enabled = false;
+        }
     }
 
     void FixedUpdate()
@@ -38,10 +48,18 @@ public class RocketInputHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (!other.gameObject.CompareTag("Friendly"))
+        if (_state != State.Alive) { return; }
+        
+        if (!other.gameObject.CompareTag("Friendly") && !other.gameObject.CompareTag("Finish"))
         {
-            print("DIE"); 
-        } 
+            _state = State.Dead;
+            playerDeathEvent.RaiseEvent();
+        }
+        else if (other.gameObject.CompareTag("Finish"))
+        {
+            _state = State.Dead;
+            playerAtLvlEndEvent.RaiseEvent();
+        }
     }
 
     // methods
@@ -74,5 +92,16 @@ public class RocketInputHandler : MonoBehaviour
         {
             _rotationVector.z = 0;
         }
+    }
+
+    private void PostDeathCleanUp()
+    {
+        _audioSource.Stop();
+    }
+    
+    enum State
+    {
+        Alive,
+        Dead
     }
 }
