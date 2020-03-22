@@ -7,10 +7,21 @@
       <e p="3RocketBoost.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="GameEvent.cs" t="Include" />
-        <e p="RocketInputHandler.cs" t="Include" />
-        <e p="SceneLoader.cs" t="Include" />
-        <e p="SessionManager.cs" t="Include" />
+        <e p="_Game" t="Include">
+          <e p="_Common" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="GameEvent.cs" t="Include" />
+              <e p="SceneLoader.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Rocket" t="Include">
+            <e p="RocketInputHandler.cs" t="Include" />
+          </e>
+          <e p="SessionController" t="Include">
+            <e p="SessionManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Oscillator.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
