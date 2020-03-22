@@ -14,7 +14,7 @@ public class Oscillator : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var cycles = Mathf.Sin(Time.time / 2f);
+        var cycles = Mathf.Sin(Time.time);
         var offsetPos = offset * cycles;
         _rigidbody.position = _startingPos + offsetPos;
     }

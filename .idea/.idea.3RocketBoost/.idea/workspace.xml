@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4644bd59-5717-49e7-a8bd-473b44bc11cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Pads/LandingPad.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Pads/LandingPad.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/Rocket.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oscillator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oscillator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/SessionController/SessionController.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/SessionController/SessionController.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +36,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Directional Light.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Oscillator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -48,8 +50,10 @@
         <option value="$PROJECT_DIR$/Assets/SceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/SessionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/RocketInputHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Oscillator.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" />
       </list>
     </option>
   </component>
@@ -101,7 +105,7 @@
       <updated>1584564341616</updated>
       <workItem from="1584564343249" duration="24929000" />
       <workItem from="1584795468535" duration="12930000" />
-      <workItem from="1584882740752" duration="1614000" />
+      <workItem from="1584882740752" duration="3532000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1584564747632</created>
@@ -194,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584815720426</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added oscillator obstacle that can move. uses kinematic rigidbody.">
+      <created>1584885253332</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1584885253332</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -228,7 +239,8 @@
     <MESSAGE value="player has dead/alive states. scriptable object event system created. events generated when player either dead or reaches end of current level. on death, first level loaded. On reach end of level, next level loaded." />
     <MESSAGE value="added death and success afx. created new states to represent thrusting, not thrusting and level complete. audio is chosen based on state." />
     <MESSAGE value="asset organizing." />
-    <option name="LAST_COMMIT_MESSAGE" value="asset organizing." />
+    <MESSAGE value="added oscillator obstacle that can move. uses kinematic rigidbody." />
+    <option name="LAST_COMMIT_MESSAGE" value="added oscillator obstacle that can move. uses kinematic rigidbody." />
   </component>
   <component name="WindowStateProjectService">
     <state x="110" y="213" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1584797138054">
@@ -256,9 +268,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="293" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584747101143" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584797037459">
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584895275915">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584797037459" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584895275915" />
   </component>
 </project>

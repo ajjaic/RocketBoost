@@ -4,6 +4,7 @@ using UnityEngine;
 // TODO: stop thrust afx when player dead
 public class RocketInputHandler : MonoBehaviour
 {
+    // TODO: apply pragmas to other scripts
     #pragma warning disable 649
     [Header("Event")]
     [SerializeField] private GameEvent playerDeathEvent;
@@ -27,6 +28,7 @@ public class RocketInputHandler : MonoBehaviour
     private Vector3 _forceVector; // thrust
     private Vector3 _rotationVector; // rotations
     private State _state = State.Alive; // current player state
+    private bool _disableCollision;
 
     // messages
     void Start()
@@ -57,7 +59,7 @@ public class RocketInputHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (_state == State.Dead || _state == State.LevelComplete) { return; }
+        if (_state == State.Dead || _state == State.LevelComplete || _disableCollision) { return; }
         
         if (!other.gameObject.CompareTag("Friendly") && !other.gameObject.CompareTag("Finish"))
         {
@@ -153,5 +155,11 @@ public class RocketInputHandler : MonoBehaviour
         AliveAndThrusting,
         AliveAndNotThrusting,
         LevelComplete
+    }
+    
+    // API
+    public void ToggleCollision()
+    {
+        _disableCollision = !_disableCollision;
     }
 }
