@@ -27,6 +27,14 @@ public class RocketInputHandler : MonoBehaviour
     
     private Vector3 _forceVector, _rotationVector; // thrust and rotations
     private State _state = State.Alive; // current player state
+    
+    enum State
+    {
+        Alive,
+        Dead,
+        Thrusting,
+        LevelComplete
+    }
 
     // messages
     void Start()
@@ -34,6 +42,140 @@ public class RocketInputHandler : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody>();
         _audioSource = GetComponent<AudioSource>();
     }
+
+    private void Update()
+    {
+        HandleThrust();
+        HandleRotation();
+    }
+    
+    void FixedUpdate()
+    {
+        _rigidBody.AddRelativeForce(_forceVector);
+        if (Math.Abs(_rotationVector.z) > Mathf.Epsilon)
+        {
+            _rigidBody.angularVelocity = Vector3.zero;
+            var rotationDelta = Quaternion.Euler(_rotationVector);
+            _rigidBody.MoveRotation((_rigidBody.rotation * rotationDelta));
+        }
+    }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if (_state == State.Dead || _state == State.LevelComplete || varColliderDisabler.GetBool()) { return; }
+        
+        if (!other.gameObject.CompareTag("Friendly") && !other.gameObject.CompareTag("Finish"))
+        {
+            _state = State.Dead;
+            HandleAudio();
+            HandleParticles();
+            HandleDeath();
+            playerDeathEvent.RaiseEvent();
+        }
+        else if (other.gameObject.CompareTag("Finish"))
+        {
+            _state = State.LevelComplete;
+            HandleAudio();
+            HandleParticles();
+            HandleLevelComplete();
+            playerAtLvlEndEvent.RaiseEvent();
+        }
+    }
+
+    // methods
+    private void HandleLevelComplete()
+    {
+        if (_state == State.LevelComplete)
+        {
+            enabled = false;
+        }
+    }
+
+    private void HandleDeath()
+    {
+        if (_state == State.Dead)
+        {
+            enabled = false;
+        }
+    }
+
+    private void HandleThrust()
+    {
+        if (Input.GetButton("Thrust"))
+        {
+            _state = State.Thrusting;
+            _forceVector = Vector3.up * forwardVelocity;
+        }
+        else
+        {
+            _state = State.Alive;
+            _forceVector = Vector3.zero;
+        }
+        HandleAudio();
+        HandleParticles();
+    }
+    
+    private void HandleRotation()
+    {
+        if (Input.GetButton("RotateLeft"))
+        {
+            _rotationVector.z = rotationVelocity;
+        }
+        else if (Input.GetButton("RotateRight"))
+        {
+            _rotationVector.z = -rotationVelocity;
+        }
+        else
+        {
+            _rotationVector.z = 0;
+        }
+    }
+
+    private void HandleParticles()
+    {
+        switch (_state)
+        {
+            case State.Alive:
+                mainThrusterParticleSys.Stop();
+                break;
+            case State.Thrusting:
+                if (!mainThrusterParticleSys.isPlaying) mainThrusterParticleSys.Play();
+                break;
+            case State.Dead:
+                mainThrusterParticleSys.Stop();
+                levelFinishedParticleSys.Stop();
+                deathExplosionParticleSys.Play();
+                break;
+            case State.LevelComplete:
+                mainThrusterParticleSys.Stop();
+                deathExplosionParticleSys.Stop();
+                levelFinishedParticleSys.Play();
+                break;
+        }
+    }
+
+    private void  HandleAudio()
+    {
+        switch (_state)
+        {
+            case State.Alive:
+                _audioSource.Stop();
+                break;
+            case State.Thrusting:
+                if (!_audioSource.isPlaying) _audioSource.PlayOneShot(mainThrusterAudio);
+                break;
+            case State.Dead:
+                _audioSource.Stop();
+                _audioSource.PlayOneShot(deathExplosionAudio);
+                break;
+            case State.LevelComplete:
+                _audioSource.Stop();
+                _audioSource.PlayOneShot(levelFinishedAudio);
+                break;
+        }
+    }
+
+    /*    
 
     void Update()
     {
@@ -143,13 +285,6 @@ public class RocketInputHandler : MonoBehaviour
         deathExplosionParticleSys.Stop();
         levelFinishedParticleSys.Stop();
     }
+*/
 
-    enum State
-    {
-        Alive,
-        Dead,
-        AliveAndThrusting,
-        AliveAndNotThrusting,
-        LevelComplete
-    }
 }

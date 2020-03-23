@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4644bd59-5717-49e7-a8bd-473b44bc11cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/Rocket.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/GameEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/GameEvent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,11 @@
   </component>
   <component name="Git.Settings">
     <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubPullRequestsUISettings">
@@ -42,6 +46,7 @@
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BoolVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/_Common/Scripts/GameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,6 +68,7 @@
         <option value="$PROJECT_DIR$/Assets/BoolVariable.cs" />
         <option value="$PROJECT_DIR$/Assets/DebugProcessor.cs" />
         <option value="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/GameEvent.cs" />
       </list>
     </option>
   </component>
@@ -89,9 +95,9 @@
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.CSharpInteractiveConfiguration" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29564">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -114,7 +120,7 @@
       <updated>1584564341616</updated>
       <workItem from="1584564343249" duration="24929000" />
       <workItem from="1584795468535" duration="12930000" />
-      <workItem from="1584882740752" duration="11564000" />
+      <workItem from="1584882740752" duration="17100000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1584564747632</created>
@@ -221,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584896961481</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="created new script to handle debug key presses. created new scriptable object variable for disabling/enabling player collision.">
+      <created>1584988143300</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1584988143300</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -258,7 +271,8 @@
     <MESSAGE value="asset organizing." />
     <MESSAGE value="added oscillator obstacle that can move. uses kinematic rigidbody." />
     <MESSAGE value="added debugging key presses to disable rocket collisions and move to next level. `l` to move to the next level and `c` to disable collisions on the rocket." />
-    <option name="LAST_COMMIT_MESSAGE" value="added debugging key presses to disable rocket collisions and move to next level. `l` to move to the next level and `c` to disable collisions on the rocket." />
+    <MESSAGE value="created new script to handle debug key presses. created new scriptable object variable for disabling/enabling player collision." />
+    <option name="LAST_COMMIT_MESSAGE" value="created new script to handle debug key presses. created new scriptable object variable for disabling/enabling player collision." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -270,6 +284,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="127" y="205" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1584979840532" />
+    <state x="127" y="205" key="#Vim_Emulation" timestamp="1584998330885">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="127" y="205" key="#Vim_Emulation/0.0.1920.1080@0.0.1920.1080" timestamp="1584998330885" />
     <state x="0" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584979166685">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -278,10 +296,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="361" y="262" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584979427808" />
-    <state x="110" y="213" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1584797138054">
+    <state x="299" y="225" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1584989033112">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="110" y="213" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584797138054" />
+    <state x="299" y="225" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584989033112" />
     <state width="461" height="442" key="Diff.GoToChangePopup" timestamp="1584625862547">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -363,10 +381,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="356" y="247" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584986357203" />
-    <state x="469" y="179" key="SettingsEditor" timestamp="1584979219513">
+    <state x="469" y="179" key="SettingsEditor" timestamp="1584988565617">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584979219513" />
+    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584988565617" />
     <state x="560" y="268" key="Vcs.Push.Dialog.v2" timestamp="1584641183377">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -383,10 +401,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="98" y="283" width="1093" height="730" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1080@0.0.1920.1080" timestamp="1584979131745" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584895275915">
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584998374758">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584895275915" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584998374758" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
