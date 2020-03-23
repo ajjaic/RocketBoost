@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4644bd59-5717-49e7-a8bd-473b44bc11cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/Rocket.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/GameEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/GameEvent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +65,8 @@
         <option value="$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/BoolVariable.cs" />
         <option value="$PROJECT_DIR$/Assets/DebugProcessor.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/GameEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" />
       </list>
     </option>
   </component>
@@ -98,16 +96,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29564">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="29564" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29564">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="29564" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
   </component>
@@ -246,8 +244,29 @@
           <value>
             <State>
               <option name="SHOW_DETAILS_IN_CHANGES" value="false" />
+              <option name="BEK_SORT_TYPE" value="1" />
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="use_statemachine_represent_player_states" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -304,11 +323,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="461" height="442" key="Diff.GoToChangePopup/0.0.1920.1080@0.0.1920.1080" timestamp="1584625862547" />
-    <state x="100" y="78" width="1720" height="900" key="DiffContextDialog" timestamp="1584721080704">
+    <state x="100" y="78" width="1720" height="900" key="DiffContextDialog" timestamp="1584998909708">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="100" y="78" width="1720" height="900" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584625866380" />
-    <state x="100" y="78" width="1720" height="900" key="DiffContextDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1584721080704" />
+    <state x="100" y="78" width="1720" height="900" key="DiffContextDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1584998909708" />
     <state width="1034" height="261" key="GridCell.Tab.0.bottom" timestamp="1584980628397">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -385,10 +404,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584988565617" />
-    <state x="560" y="268" key="Vcs.Push.Dialog.v2" timestamp="1584641183377">
+    <state x="560" y="268" key="Vcs.Push.Dialog.v2" timestamp="1584999057345">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="560" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584641183377" />
+    <state x="560" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1584999057345" />
     <state width="527" height="540" key="XDebugger.FullValuePopup" timestamp="1584980166458">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
