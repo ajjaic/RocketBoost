@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-// TODO: stop thrust afx when player dead
 public class RocketInputHandler : MonoBehaviour
 {
-    // TODO: apply pragmas to other scripts
     #pragma warning disable 649
+    [Header("ScriptableVariables")] 
+    [SerializeField] private BoolVariable varColliderDisabler;
     [Header("Event")]
     [SerializeField] private GameEvent playerDeathEvent;
     [SerializeField] private GameEvent playerAtLvlEndEvent;
@@ -25,10 +25,8 @@ public class RocketInputHandler : MonoBehaviour
     private Rigidbody _rigidBody;
     private AudioSource _audioSource; 
     
-    private Vector3 _forceVector; // thrust
-    private Vector3 _rotationVector; // rotations
+    private Vector3 _forceVector, _rotationVector; // thrust and rotations
     private State _state = State.Alive; // current player state
-    private bool _disableCollision;
 
     // messages
     void Start()
@@ -49,17 +47,15 @@ public class RocketInputHandler : MonoBehaviour
         _rigidBody.AddRelativeForce(_forceVector);
         if (Math.Abs(_rotationVector.z) > Mathf.Epsilon)
         {
-            // Bug: After freezerotation is over, x and y axis rotation is not constrained again.
-            _rigidBody.freezeRotation = true;
+            _rigidBody.angularVelocity = Vector3.zero;
             var rotationDelta = Quaternion.Euler(_rotationVector);
             _rigidBody.MoveRotation((_rigidBody.rotation * rotationDelta));
-            _rigidBody.freezeRotation = false;
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (_state == State.Dead || _state == State.LevelComplete || _disableCollision) { return; }
+        if (_state == State.Dead || _state == State.LevelComplete || varColliderDisabler.GetBool()) { return; }
         
         if (!other.gameObject.CompareTag("Friendly") && !other.gameObject.CompareTag("Finish"))
         {
@@ -155,11 +151,5 @@ public class RocketInputHandler : MonoBehaviour
         AliveAndThrusting,
         AliveAndNotThrusting,
         LevelComplete
-    }
-    
-    // API
-    public void ToggleCollision()
-    {
-        _disableCollision = !_disableCollision;
     }
 }

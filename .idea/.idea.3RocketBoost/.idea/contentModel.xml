@@ -21,6 +21,8 @@
             <e p="SessionManager.cs" t="Include" />
           </e>
         </e>
+        <e p="BoolVariable.cs" t="Include" />
+        <e p="DebugProcessor.cs" t="Include" />
         <e p="Oscillator.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />

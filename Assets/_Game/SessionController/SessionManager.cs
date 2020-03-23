@@ -1,31 +1,13 @@
 ﻿using UnityEngine;
 
-// TODO: this class should be scriptable object
 public class SessionManager : MonoBehaviour
 {
-    [SerializeField] private RocketInputHandler player; // TODO: cannot have direct reference to the player. remove and
-                                                        // replace with scriptable object
-    [SerializeField] private GameEvent playerDeathEvent = null;
-    [SerializeField] private GameEvent playerAtLvlEndEvent = null;
-    [SerializeField] private float sceneLoadDelay = 0f;
+    #pragma warning disable 649
+    [SerializeField] private GameEvent playerDeathEvent;
+    [SerializeField] private GameEvent playerAtLvlEndEvent;
+    [SerializeField] private float sceneLoadDelay;
+    #pragma warning restore 649
     
-    // messages
-    private void Update()
-    {
-        if (Debug.isDebugBuild)
-        {
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                StartCoroutine(SceneLoader.LoadNextLevel(0));
-            }
-
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                player.ToggleCollision();
-            }
-        }
-    }
-
     private void OnEnable()
     {
         playerDeathEvent.CallbackListener += PlayerHasDied;
