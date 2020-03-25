@@ -17,14 +17,14 @@ public class RocketInputHandler : MonoBehaviour
     [SerializeField] private AudioClip deathExplosionAudio;
     [SerializeField] private AudioClip levelFinishedAudio;
     [Header("Particle Systems")]
-    [SerializeField] private ParticleSystem mainThrusterParticleSys;
     [SerializeField] private ParticleSystem deathExplosionParticleSys;
     [SerializeField] private ParticleSystem levelFinishedParticleSys;
     #pragma warning restore 649
     
     private Rigidbody _rigidBody;
-    private AudioSource _audioSource; 
-    
+    private AudioSource _audioSource;
+
+    private ParticleSystem _mainThrusterParticleSys;
     private Vector3 _forceVector, _rotationVector; // thrust and rotations
     private State _state = State.Alive; // current player state
     
@@ -41,6 +41,7 @@ public class RocketInputHandler : MonoBehaviour
     {
         _rigidBody = GetComponent<Rigidbody>();
         _audioSource = GetComponent<AudioSource>();
+        _mainThrusterParticleSys = GetComponentInChildren<ParticleSystem>();
     }
 
     private void Update()
@@ -70,7 +71,7 @@ public class RocketInputHandler : MonoBehaviour
             HandleAudio();
             HandleParticles();
             HandleDeath();
-            playerDeathEvent.RaiseEvent();
+            // playerDeathEvent.RaiseEvent();
         }
         else if (other.gameObject.CompareTag("Finish"))
         {
@@ -88,6 +89,7 @@ public class RocketInputHandler : MonoBehaviour
         if (_state == State.LevelComplete)
         {
             enabled = false;
+            Instantiate(levelFinishedParticleSys);
         }
     }
 
@@ -96,6 +98,8 @@ public class RocketInputHandler : MonoBehaviour
         if (_state == State.Dead)
         {
             enabled = false;
+            Instantiate(deathExplosionParticleSys, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
     }
 
@@ -136,18 +140,18 @@ public class RocketInputHandler : MonoBehaviour
         switch (_state)
         {
             case State.Alive:
-                mainThrusterParticleSys.Stop();
+                _mainThrusterParticleSys.Stop(false, ParticleSystemStopBehavior.StopEmitting);
                 break;
             case State.Thrusting:
-                if (!mainThrusterParticleSys.isPlaying) mainThrusterParticleSys.Play();
+                if (!_mainThrusterParticleSys.isEmitting) _mainThrusterParticleSys.Play();
                 break;
             case State.Dead:
-                mainThrusterParticleSys.Stop();
+                _mainThrusterParticleSys.Stop();
                 levelFinishedParticleSys.Stop();
                 deathExplosionParticleSys.Play();
                 break;
             case State.LevelComplete:
-                mainThrusterParticleSys.Stop();
+                _mainThrusterParticleSys.Stop();
                 deathExplosionParticleSys.Stop();
                 levelFinishedParticleSys.Play();
                 break;
@@ -166,7 +170,7 @@ public class RocketInputHandler : MonoBehaviour
                 break;
             case State.Dead:
                 _audioSource.Stop();
-                _audioSource.PlayOneShot(deathExplosionAudio);
+                AudioSource.PlayClipAtPoint(deathExplosionAudio, Camera.main.transform.position, 0.5f); // TODO add camera in editor
                 break;
             case State.LevelComplete:
                 _audioSource.Stop();

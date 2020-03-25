@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4644bd59-5717-49e7-a8bd-473b44bc11cd" name="Default Changelist" comment="">
+    <list default="true" id="4644bd59-5717-49e7-a8bd-473b44bc11cd" name="Default Changelist" comment="asset organization. created prefabs for a couple of game objects.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/Boosters.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/Boosters.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/ExplosionParticles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/ExplosionParticles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/ExplosionParticles.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/ExplosionParticles.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/LevelFinishParticles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/LevelFinishParticles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/NoseCone.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/NoseCone.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/Rocket.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/Rocket.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/Rocket.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketJetParticles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketJetParticles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketJetParticles.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/RocketJetParticles.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Level2.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Level2.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +52,12 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/DebugProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Directional Light.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Oscillator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/BoolVariable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/_Common/Scripts/GameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,6 +80,7 @@
         <option value="$PROJECT_DIR$/Assets/BoolVariable.cs" />
         <option value="$PROJECT_DIR$/Assets/DebugProcessor.cs" />
         <option value="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/GameEvent.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
         <option value="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" />
       </list>
     </option>
@@ -92,6 +107,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -232,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584988143300</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="asset organization. created prefabs for a couple of game objects.">
+      <created>1584999424299</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1584999424299</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -291,7 +314,8 @@
     <MESSAGE value="added oscillator obstacle that can move. uses kinematic rigidbody." />
     <MESSAGE value="added debugging key presses to disable rocket collisions and move to next level. `l` to move to the next level and `c` to disable collisions on the rocket." />
     <MESSAGE value="created new script to handle debug key presses. created new scriptable object variable for disabling/enabling player collision." />
-    <option name="LAST_COMMIT_MESSAGE" value="created new script to handle debug key presses. created new scriptable object variable for disabling/enabling player collision." />
+    <MESSAGE value="asset organization. created prefabs for a couple of game objects." />
+    <option name="LAST_COMMIT_MESSAGE" value="asset organization. created prefabs for a couple of game objects." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -412,6 +436,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="527" height="540" key="XDebugger.FullValuePopup/0.0.1920.1080@0.0.1920.1080" timestamp="1584980166458" />
+    <state x="253" y="281" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1585173818641">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="253" y="281" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585173818641" />
     <state x="293" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584747101143">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

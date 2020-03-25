@@ -10,9 +10,16 @@
         <e p="_Game" t="Include">
           <e p="_Common" t="Include">
             <e p="Scripts" t="Include">
+              <e p="BoolVariable.cs" t="Include" />
               <e p="GameEvent.cs" t="Include" />
               <e p="SceneLoader.cs" t="Include" />
             </e>
+          </e>
+          <e p="DebugProcessor" t="Include">
+            <e p="DebugProcessor.cs" t="Include" />
+          </e>
+          <e p="Oscillator" t="Include">
+            <e p="Oscillator.cs" t="Include" />
           </e>
           <e p="Rocket" t="Include">
             <e p="RocketInputHandler.cs" t="Include" />
@@ -21,9 +28,19 @@
             <e p="SessionManager.cs" t="Include" />
           </e>
         </e>
-        <e p="BoolVariable.cs" t="Include" />
-        <e p="DebugProcessor.cs" t="Include" />
-        <e p="Oscillator.cs" t="Include" />
+        <e p="PolygonPrototype" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="Prototype_Glass_Global.shader" t="Include" />
+            <e p="Prototype_Glass_Object.shader" t="Include" />
+            <e p="Prototype_Global.shader" t="Include" />
+            <e p="Prototype_Object.shader" t="Include" />
+          </e>
+        </e>
+        <e p="Real Stars Skybox" t="Include">
+          <e p="Demo Scene" t="Include">
+            <e p="Documentation.txt" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
