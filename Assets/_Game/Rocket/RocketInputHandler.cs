@@ -6,6 +6,7 @@ public class RocketInputHandler : MonoBehaviour
     #pragma warning disable 649
     [Header("ScriptableVariables")] 
     [SerializeField] private BoolVariable varColliderDisabler;
+    [SerializeField] private BoolVariable isAllStarsCollected;
     [Header("Event")]
     [SerializeField] private GameEvent playerDeathEvent;
     [SerializeField] private GameEvent playerAtLvlEndEvent;
@@ -69,17 +70,20 @@ public class RocketInputHandler : MonoBehaviour
         {
             _state = State.Dead;
             HandleAudio();
-            HandleParticles();
+            HandleMainThruster();
             HandleDeath();
-            // playerDeathEvent.RaiseEvent();
+            playerDeathEvent.RaiseEvent();
         }
         else if (other.gameObject.CompareTag("Finish"))
         {
-            _state = State.LevelComplete;
-            HandleAudio();
-            HandleParticles();
-            HandleLevelComplete();
-            playerAtLvlEndEvent.RaiseEvent();
+            if (isAllStarsCollected.GetBool())
+            {
+                _state = State.LevelComplete;
+                HandleAudio();
+                HandleMainThruster();
+                HandleLevelComplete();
+                playerAtLvlEndEvent.RaiseEvent();
+            }
         }
     }
 
@@ -89,7 +93,7 @@ public class RocketInputHandler : MonoBehaviour
         if (_state == State.LevelComplete)
         {
             enabled = false;
-            Instantiate(levelFinishedParticleSys);
+            Instantiate(levelFinishedParticleSys, transform.position, transform.rotation);
         }
     }
 
@@ -116,7 +120,7 @@ public class RocketInputHandler : MonoBehaviour
             _forceVector = Vector3.zero;
         }
         HandleAudio();
-        HandleParticles();
+        HandleMainThruster();
     }
     
     private void HandleRotation()
@@ -135,7 +139,7 @@ public class RocketInputHandler : MonoBehaviour
         }
     }
 
-    private void HandleParticles()
+    private void HandleMainThruster()
     {
         switch (_state)
         {
@@ -147,13 +151,9 @@ public class RocketInputHandler : MonoBehaviour
                 break;
             case State.Dead:
                 _mainThrusterParticleSys.Stop();
-                levelFinishedParticleSys.Stop();
-                deathExplosionParticleSys.Play();
                 break;
             case State.LevelComplete:
                 _mainThrusterParticleSys.Stop();
-                deathExplosionParticleSys.Stop();
-                levelFinishedParticleSys.Play();
                 break;
         }
     }
@@ -170,7 +170,8 @@ public class RocketInputHandler : MonoBehaviour
                 break;
             case State.Dead:
                 _audioSource.Stop();
-                AudioSource.PlayClipAtPoint(deathExplosionAudio, Camera.main.transform.position, 0.5f); // TODO add camera in editor
+                // TODO add ref to camera in editor. Parameter for volume.
+                AudioSource.PlayClipAtPoint(deathExplosionAudio, Camera.main.transform.position, 0.5f); 
                 break;
             case State.LevelComplete:
                 _audioSource.Stop();

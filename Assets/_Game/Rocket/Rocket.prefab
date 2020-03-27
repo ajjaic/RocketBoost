@@ -317,6 +317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   varColliderDisabler: {fileID: 11400000, guid: 3a6997f578fe54f1b944d0a5f537affc,
     type: 2}
+  isAllStarsCollected: {fileID: 11400000, guid: 7cf8de745c00344b2be8b512f850b76b,
+    type: 2}
   playerDeathEvent: {fileID: 11400000, guid: 79d5dc6e2e3244c918326aa2a38a2ae8, type: 2}
   playerAtLvlEndEvent: {fileID: 11400000, guid: 9b3a154e640804dbda359ef2152912f5,
     type: 2}
