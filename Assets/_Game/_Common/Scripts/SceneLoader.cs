@@ -9,11 +9,25 @@ public static class SceneLoader
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(0);
     }
+
+    public static IEnumerator LoadCurrentLevel(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     
     public static IEnumerator LoadNextLevel(float delay)
     {
         yield return new WaitForSeconds(delay);
-        var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        var newSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+        if (newSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(newSceneIndex);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

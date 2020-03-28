@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4644bd59-5717-49e7-a8bd-473b44bc11cd" name="Default Changelist" comment="added star collectibles. added game music. added shooting star particle system for stars moving stars in the background. added a particle system for when stars are collected. added player following camera via cinemachine">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3RocketBoost/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CMMainCam.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CMMainCam.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Directional Light.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Directional Light.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonPrototype.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonPrototype.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Pads/LandingPad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Pads/LandingPad.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Pads/LaunchPad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Pads/LaunchPad.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Rocket/LevelFinishParticles.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Rocket/LevelFinishParticles.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/DebugProcessor/DebugProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/DebugProcessor/DebugProcessor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Level2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Trash/ExplosionParticles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Trash/ExplosionParticles.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Trash/ExplosionParticles.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Trash/ExplosionParticles.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Trash/RocketJetParticles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Trash/RocketJetParticles.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Trash/RocketJetParticles.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Trash/RocketJetParticles.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,17 +41,20 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Directional Light.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Oscillator/Oscillator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/NewGameLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/DebugProcessor/DebugProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MusicContinuation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/_Common/ScriptableObjs/BoolVariable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Directional Light.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/_Common/ScriptableObjs/IntVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/_Common/ScriptableObjs/GameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StarCollectible.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/NewGameLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Samples/Cinemachine/2.5.0/Cinemachine Example Scenes/Shared/Models/UnityCharacter/Scripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -77,16 +70,16 @@
         <option value="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/GameEvent.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
         <option value="$PROJECT_DIR$/Assets/Rotator.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Game/DebugProcessor/DebugProcessor.cs" />
         <option value="$PROJECT_DIR$/Assets/Collectible.cs" />
         <option value="$PROJECT_DIR$/Assets/StarCollectible.cs" />
         <option value="$PROJECT_DIR$/Assets/_Game/_Common/ScriptableObjs/IntVariable.cs" />
         <option value="$PROJECT_DIR$/Assets/MusicContinuation.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/NewGameLoader.cs" />
         <option value="$USER_HOME$/.ideavimrc" />
         <option value="$PROJECT_DIR$/Assets/_Game/Rocket/RocketInputHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/SessionController/SessionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/DebugProcessor/DebugProcessor.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Game/_Common/Scripts/SceneLoader.cs" />
       </list>
     </option>
   </component>
@@ -145,7 +138,8 @@
       <workItem from="1585408693666" duration="391000" />
       <workItem from="1585409113857" duration="742000" />
       <workItem from="1585409932455" duration="213000" />
-      <workItem from="1585410188409" duration="1987000" />
+      <workItem from="1585410188409" duration="5132000" />
+      <workItem from="1585419591678" duration="633000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1584564747632</created>
@@ -280,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585318519129</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added 5 levels. Playtested once.">
+      <created>1585413053899</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1585413053899</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -342,7 +343,8 @@
     <MESSAGE value="asset organization. created prefabs for a couple of game objects." />
     <MESSAGE value="refactoring. added a new rocket prefab. added shooting stars. added starfield skybox." />
     <MESSAGE value="added star collectibles. added game music. added shooting star particle system for stars moving stars in the background. added a particle system for when stars are collected. added player following camera via cinemachine" />
-    <option name="LAST_COMMIT_MESSAGE" value="added star collectibles. added game music. added shooting star particle system for stars moving stars in the background. added a particle system for when stars are collected. added player following camera via cinemachine" />
+    <MESSAGE value="Added 5 levels. Playtested once." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 5 levels. Playtested once." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -494,12 +496,16 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="98" y="283" width="1093" height="730" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1080@0.0.1920.1080" timestamp="1584979131745" />
-    <state x="2543" y="230" width="672" height="654" key="search.everywhere.popup" timestamp="1585412939770">
+    <state x="2372" y="131" width="719" height="804" key="find.popup" timestamp="1585415240044">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2372" y="131" width="719" height="804" key="find.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585415240044" />
+    <state x="2543" y="230" width="672" height="654" key="search.everywhere.popup" timestamp="1585415264224">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1585254259358" />
     <state x="623" y="257" width="672" height="664" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1585349297076" />
-    <state x="2543" y="230" width="672" height="654" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585412939770" />
+    <state x="2543" y="230" width="672" height="654" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585415264224" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

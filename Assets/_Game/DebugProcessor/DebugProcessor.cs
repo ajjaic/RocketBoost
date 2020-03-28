@@ -6,23 +6,23 @@ public class DebugProcessor : MonoBehaviour
     [SerializeField] private BoolVariable varColliderDisabler;
     #pragma warning restore 649
     
-    
     // messages
-    private void Update()
-    {
-        ProcessDebugKeys();
-    }
+    private void Update() { ProcessDebugKeys(); }
     
     // methods
     private void ProcessDebugKeys()
     {
         if (Debug.isDebugBuild)
         {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                StartCoroutine(SceneLoader.LoadFirstLevel(0));
+            }
             if (Input.GetKeyDown(KeyCode.L))
             {
                 StartCoroutine(SceneLoader.LoadNextLevel(0));
             }
-
+            
             if (Input.GetKeyDown(KeyCode.C))
             {
                 varColliderDisabler.SetBool(!varColliderDisabler.GetBool());

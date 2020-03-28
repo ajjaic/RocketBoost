@@ -23,7 +23,7 @@ public class SessionManager : MonoBehaviour
     // methods
     private void PlayerHasDied()
     {
-        StartCoroutine(SceneLoader.LoadFirstLevel(sceneLoadDelay));
+        StartCoroutine(SceneLoader.LoadCurrentLevel(sceneLoadDelay));
     }
 
     private void PlayerReachesEndOfLevel()
